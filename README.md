@@ -1,18 +1,12 @@
-# Example Simulant Test
+# Simulant Traffic Generator for Lobstrosity
 
-This module has a complete test harness built with
-[Simulant](https://github.com/Datomic/simulant). It simulates a
-shopper interacting with an ecommerce system. The parts are designed
-to be easy to learn.
-
-You can interact with the simulation via a command-line interface or
-a REPL.
+This is a traffic generator that creates "realistic" load for a
+lobste.rs instance. It's part of the
+[Monolith to Microservices](https://n6consulting.com/workshop/monolith-to-microservices/)
+workshop.
 
 This depends on Datomic Free. With a minor change to project.clj, it
 will work with Datomic Pro as well.
-
-Everything interesting is under the `simtest` directory. You should cd
-into it right away.
 
 # One-time Setup
 
@@ -21,8 +15,7 @@ category data. In a real implementation, you would get this from the
 system under test. For our purposes, a big pile of fake data will
 suffice.
 
-1. Generate seed data          `lein run -m create-data`
-
+1. Populate a corpus of links, users, and comments under `corpus`.
 
 # Walkthrough
 
@@ -36,7 +29,6 @@ suffice.
 1. View the new parameters     `lein run list-model-parameters`
 1. Make an activity stream     `lein run make-activity`
 1. View the activity stream    `lein run list-activities`
-
 
 # Introducing the Parts
 
@@ -73,7 +65,6 @@ roughly into three sections.
 1. Building a population of agents and their activity streams.
 1. The command line interface functions and their helpers.
 
-
 ## Execution/Capture
 
 Not implemented yet.
@@ -85,7 +76,7 @@ Not implemented yet.
 
 ## License
 
-Copyright © 2014-2015 Cognitect, Inc.
+Copyright © 2018, N6 Consulting LLC
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
