@@ -1,0 +1,8 @@
+{:deps
+ {com.datomic/datomic-free         {:mvn/version "0.9.5656"}
+  com.datomic/simulant             {:mvn/version "0.1.8"}
+  org.clojure/data.generators      {:mvn/version "0.1.2"}
+  org.clojure/tools.cli            {:mvn/version "0.3.5"}
+  org.craigandera/causatum         {:mvn/version "0.3.0"}
+  org.apache.commons/commons-math3 {:mvn/version "3.6.1"}
+  clj-http                         {:mvn/version "3.7.0"}}}

@@ -46,3 +46,4 @@ pom.xml.asc
 .nrepl-port
 /simtest/resources/shop/category.edn
 /simtest/resources/shop/sku.edn
+.cpcache
