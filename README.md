@@ -20,15 +20,15 @@ suffice.
 # Walkthrough
 
 1. Start Datomic with          `scripts/start-transactor.sh`
-1. Install the schema          `lein run install-schema`
-1. Make a model                `lein run make-model`
-1. Make a different model      `lein run make-model -m "Another model"`
-1. See the models              `lein run list-models`
-1. View the model's parameters `lein run list-model-parameters`
-1. Reduce the abandon rate     `lein run set-model-parameter abandon-rate 8`
-1. View the new parameters     `lein run list-model-parameters`
-1. Make an activity stream     `lein run make-activity`
-1. View the activity stream    `lein run list-activities`
+1. Install the schema          `scripts/run install-schema`
+1. Make a model                `scripts/run make-model`
+1. Make a different model      `scripts/run make-model -m "Another model"`
+1. See the models              `scripts/run list-models`
+1. View the model's parameters `scripts/run list-model-parameters`
+1. Reduce the abandon rate     `scripts/run set-model-parameter abandon-rate 8`
+1. View the new parameters     `scripts/run list-model-parameters`
+1. Make an activity stream     `scripts/run make-activity`
+1. View the activity stream    `scripts/run list-activities`
 
 # Introducing the Parts
 

@@ -73,7 +73,7 @@
   (let [created? (d/create-database uri)
         conn (d/connect uri)]
     (enable-migration-tracking! conn)
-    (for [schema-definition ["simulant/schema.edn" "simtest.edn"]]
+    (for [schema-definition ["simulant/schema.edn" "schema.edn"]]
       (do (println "Loading " schema-definition)
           (load-schemata! conn schema-definition)))))
 
