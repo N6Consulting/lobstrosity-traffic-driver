@@ -1,8 +1,8 @@
-(ns simtest.generator
+(ns traffic.generator
   (:require [clojure.pprint :as pprint]
             [datomic.api :as d]
-            [simtest.main :as m]
-            [simtest.model :as model]
+            [traffic.main :as m]
+            [traffic.model :as model]
             [simulant.sim :as sim]
             [simulant.util :as u]))
 
@@ -31,7 +31,7 @@
    creates these nicely.
 
    The state used for dispatch here should match one of the
-   states in simtest.model/shopper-transitions."
+   states in traffic.model/shopper-transitions."
   (fn [_ _ state] (:state state)))
 
 (defmethod actions-for-state :default [])

@@ -1,4 +1,4 @@
-(ns simtest.main)
+(ns traffic.main)
 
 (defmulti run-command (fn [command & _] command))
 

@@ -1,5 +1,5 @@
-(ns simtest.sanity-check
-  (:require [simtest.model :as m]))
+(ns traffic.sanity-check
+  (:require [traffic.model :as m]))
 
 (def count-vals (map (fn [[k v]] {k (count v)})))
 

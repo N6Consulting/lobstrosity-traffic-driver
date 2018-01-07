@@ -1,7 +1,7 @@
-(ns simtest.cli
+(ns traffic.cli
   (:require [clojure.tools.cli :refer [parse-opts]]
             [clojure.string :as str]
-            [simtest.main :as m]))
+            [traffic.main :as m]))
 
 (def cli-options
   [["-d" "--datomic-uri URI" "Datomic URI"
@@ -63,14 +63,14 @@
       (exit -1 (str "Unknown return value " res)))))
 
 (def command->namespace
-  {"install-schema"        'simtest.database
-   "make-model"            'simtest.model
-   "set-model-parameter"   'simtest.model
-   "list-model-parameters" 'simtest.model
-   "list-models"           'simtest.model
-   "make-activity"         'simtest.generator
-   "list-activities"       'simtest.generator
-   "run-test"              'simtest.executor})
+  {"install-schema"        'traffic.database
+   "make-model"            'traffic.model
+   "set-model-parameter"   'traffic.model
+   "list-model-parameters" 'traffic.model
+   "list-models"           'traffic.model
+   "make-activity"         'traffic.generator
+   "list-activities"       'traffic.generator
+   "run-test"              'traffic.executor})
 
 (defn -main [& args]
   (let [{:keys [options arguments errors summary]} (parse-opts args cli-options)]

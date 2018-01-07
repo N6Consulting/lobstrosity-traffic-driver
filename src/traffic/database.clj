@@ -1,7 +1,7 @@
-(ns simtest.database
+(ns traffic.database
   (:require [clojure.java.io :as io]
             [datomic.api :as d]
-            [simtest.main :as m]))
+            [traffic.main :as m]))
 
 (def ^:private migration-tracking-attributes
   [{:db/id          #db/id[:db.part/db]

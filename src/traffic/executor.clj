@@ -1,15 +1,15 @@
-(ns simtest.executor
+(ns traffic.executor
   (:require [datomic.api :as d]
-            [simtest.main :as m]
+            [traffic.main :as m]
             [simulant.sim :as sim]
             [simulant.util :as u]))
 
-(def action-namespaces '[simtest.actions.abandon-checkout
-                         simtest.actions.abandon-session
-                         simtest.actions.page-request
-                         simtest.actions.process-enter
-                         simtest.actions.purchase-confirm
-                         simtest.actions.start-session])
+(def action-namespaces '[traffic.actions.abandon-checkout
+                         traffic.actions.abandon-session
+                         traffic.actions.page-request
+                         traffic.actions.process-enter
+                         traffic.actions.purchase-confirm
+                         traffic.actions.start-session])
 
 (defn locate-activity-stream
   [{:keys [conn activity-id] :as ctx}]

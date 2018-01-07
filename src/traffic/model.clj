@@ -1,4 +1,4 @@
-(ns simtest.model
+(ns traffic.model
   "Activity stream model"
   (:require [causatum.event-streams :as es]
             [clojure.data.generators :as gen]
@@ -7,7 +7,7 @@
             [clojure.pprint :as pprint]
             [clojure.string :as str]
             [datomic.api :as d]
-            [simtest.main :as m])
+            [traffic.main :as m])
   (:import [org.apache.commons.math3.distribution ParetoDistribution]))
 
 (defn shopper-transitions
@@ -148,7 +148,7 @@
                           edn/read-string)]
     result
     (throw (ex-info "Missing resource"
-                    (simtest.main/missing-resource "You probably need to load the namespace 'create-data' to build the test data files.")))))
+                    (traffic.main/missing-resource "You probably need to load the namespace 'create-data' to build the test data files.")))))
 
 (defn category-sampler
   "Return a function that samples from categories, using a
